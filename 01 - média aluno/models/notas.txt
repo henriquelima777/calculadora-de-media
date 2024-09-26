@@ -1,0 +1,2 @@
+henrique;10;10;10;10;Aprovado
+eduardo;0.1;1.2;6.5;2.60;Reprovado

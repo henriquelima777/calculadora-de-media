@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Notas</title>
+    <link rel="stylesheet" href="/static/styles/estilo.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Lançar Notas</a> |
+            <a href="/consulta">Consultar Notas</a>
+        </nav>
+    </header>
+    <div class="consulta_notas">
+        <h2>Consultar Notas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome do Aluno</th>
+                    <th>Nota 1</th>
+                    <th>Nota 2</th>
+                    <th>Nota 3</th>
+                    <th>Média</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for nota in notas %}
+                <tr>
+                    <td>{{ nota.nome_aluno }}</td>
+                    <td>{{ nota.nota1 }}</td>
+                    <td>{{ nota.nota2 }}</td>
+                    <td>{{ nota.nota3 }}</td>
+                    <td>{{ nota.media }}</td>
+                    <td>{{ nota.status }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
